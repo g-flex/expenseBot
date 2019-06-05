@@ -123,3 +123,27 @@ Each command leads to a database query and a response.
 ### Database
 The database has this simple structure: 
 ![Expense Bot structure](/screens/database.png)
+
+
+***
+
+
+### Telegram
+Commands are the following: ![Expense Bot commands](/screens/commands.png)
+
+
+This is an example of adding an expense: ![Expense Bot add](/screens/add%20expense.png)
+
+The bot always replies with *success* or *error* .
+
+
+***
+
+
+### Web App
+Is intended to display in an intuitive way all your expenses.
+
+
+This is an example of expense on the web app: ![Expense Bot webapp](/screens/web%20app.png)
+
+User can edit the field by clicking, editing and pressing enter.
