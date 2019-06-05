@@ -129,7 +129,7 @@ The database has this simple structure:
 
 
 ### Telegram
-Commands are the following: ![Expense Bot commands](/screens/commands.png)
+Commands are the following: ![Expense Bot commands](/screens/commands.jpg)
 
 
 This is an example of adding an expense: ![Expense Bot add](/screens/add%20expense.png)
