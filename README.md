@@ -26,6 +26,9 @@ I collect *:params* from it and execute database queries with the function for m
 
 
 **Messages** in the lower parts are so divided:
-Normal messages, set as *user msg*, which come without initial slash, and commands, which come with initial slash (ex. */help*).
+
+**Normal messages**, set as *user msg*, which come without initial slash, 
+
+and **commands**, which come with initial slash (ex. */help*).
 I chose to set as /commands all the settings inputs, and normal messages for bot interactions.
 
