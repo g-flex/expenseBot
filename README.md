@@ -9,3 +9,6 @@ To learn how I set up my server environment, you can head at [this guide](https:
 
 
 ### Node-red
+This is what the flow looks like:
+
+![Expense Bot flow](/screens/all flow.png)
