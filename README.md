@@ -147,3 +147,5 @@ Is intended to display in an intuitive way all your expenses.
 This is an example of expense on the web app: ![Expense Bot webapp](/screens/web%20app.png)
 
 User can edit the field by clicking, editing and pressing enter.
+
+The **balance** is displayed on the top-left corner.
