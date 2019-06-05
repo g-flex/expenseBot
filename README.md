@@ -15,10 +15,9 @@ This is what the flow looks like:
 
 There is an upper part where I put the endpoints (same as an API), and a lower part where i put user messages parsing.
 
-An **endpoint** looks like this one:
-![Expense Bot endpoint](/screens/specific%20endpoint.png)
+An **endpoint** looks like this one: ![Expense Bot endpoint](/screens/specific%20endpoint.png)
 
-I collect data from it and execute database queries with the function for mySQL node:
+I collect *:params* from it and execute database queries with the function for mySQL node:
 ![Expense Bot sql](/screens/specific%20query.png)
  Response is a json object.
  
