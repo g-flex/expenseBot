@@ -20,3 +20,5 @@ An endpoint looks like this one:
 
 I collect data from it and execute database queries with the function for mySQL node:
 ![Expense Bot sql](/screens/specific%20query.png)
+ Response is a json object.
+ 
