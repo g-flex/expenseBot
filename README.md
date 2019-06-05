@@ -116,3 +116,10 @@ if (msg.originalMessage.entities && msg.originalMessage.entities[0].type=='bot_c
 Each case is handled separately and can lead either to a quick bot response or to a database query and finally to a bot response. Entities like ```\u274C``` are emojis.
 
 Each command leads to a database query and a response.
+
+***
+
+
+### Database
+The database has this simple structure: 
+![Expense Bot structure](/screens/database.png)
