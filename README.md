@@ -30,7 +30,7 @@ and **commands**, which come with initial slash (ex. */help*).
 
 I chose to set as /commands all the settings inputs, and normal messages for bot interactions.
 
-*user msg* parsing function is this huge group of *if clauses* intended to detect what is the intent of the user.
+*user msg* parsing function is this huge group of *if clauses* needed to detect what is the intent of the user.
 It appears like this:
 
 ```
@@ -138,7 +138,7 @@ The bot always replies with *success* or *error* .
 
 
 ### Web App
-Is intended to display in an intuitive way all your expenses.
+Its purpose is to display in an intuitive way all your expenses.
 
 
 This is an example of expense on the web app: ![Expense Bot webapp](/screens/web%20app.png)
