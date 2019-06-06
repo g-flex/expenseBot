@@ -35,10 +35,20 @@ It appears like this:
 
 ```javascript
 if (msg.originalMessage.entities && msg.originalMessage.entities[0].type=='bot_command'){
-	//let chatId = msg.payload.chatId;
-	//msg.payload.content = 'this is a command';
-	//msg.payload.chatId = chatId;
-	//return [null, msg];
+	let chatId = msg.payload.chatId;
+	let str = msg.payload.content;
+	str = str.replace(/(^\s*)|(\s*$)/gi,"");
+	str = str.replace(/[ ]{2,}/gi," "); 
+	str = str.replace(/\n /,"\n");
+	let subStr = str.split(' ');
+	let strLength = subStr.length;
+	msg.payload = {};
+	if(subStr[0]!='/pass' && subStr[0]!='/register' && subStr[0]!='/help' && subStr[0]!='/start'){
+    		msg.payload.content = '\u274C Unrecognized command';
+		msg.payload.type = 'message';
+    		msg.payload.chatId = chatId;
+    		return [null, msg];
+	}
 } else {
 	if(!msg.originalMessage.reply_to_message){
 		let mexId=msg.payload.messageId;
