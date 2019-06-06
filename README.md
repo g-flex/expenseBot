@@ -30,7 +30,7 @@ and **commands**, which come with initial slash (ex. */help*).
 
 I chose to set as /commands all the settings inputs, and normal messages for bot interactions.
 
-*user msg* parsing function is this huge group of *if clauses* needed to detect what is the intent of the user.
+*user msg* parsing function is a huge group of *if clauses* needed to detect what is the intent of the user.
 It appears like this:
 
 ```javascript
