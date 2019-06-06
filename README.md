@@ -33,7 +33,7 @@ I chose to set as /commands all the settings inputs, and normal messages for bot
 *user msg* parsing function is this huge group of *if clauses* needed to detect what is the intent of the user.
 It appears like this:
 
-```
+```javascript
 if (msg.originalMessage.entities && msg.originalMessage.entities[0].type=='bot_command'){
 	//let chatId = msg.payload.chatId;
 	//msg.payload.content = 'this is a command';
