@@ -27,7 +27,7 @@ async function verifyLogged(){
 	// console.log('user: '+un);
 	// console.log('chid: '+chid);
 	if (un != null && chid != null && un != '' && chid != ''){
-		await fetch(`https://yourDomain.com:1880/verify/${un}/${chid}`)
+		await fetch(`https://expensebot.ggstudio.io:1880/verify/${un}/${chid}`)
 		.then(function(response) {
 			return response.json();
 		})
@@ -45,12 +45,12 @@ async function verifyLogged(){
 }
 
 async function getExpenses(username){
-	await fetch(`https://yourDomain.com:1880/view/${username}`)
+	await fetch(`https://expensebot.ggstudio.io:1880/view/${username}`)
 	.then(function(response) {
 		return response.json();
 	})
 	.then(function(fetched) {
-		//console.log(fetched);
+		//console.log('fetched EEEEExps: ', fetched);
 		fetchedExpenses = fetched[1];
 		listExpenses(fetchedExpenses);
 		changeListener();
@@ -68,7 +68,7 @@ function listExpenses(exps){
 		let newExp = document.createElement('li');
 		if(exp.exp_val < 0){
 			newExp.classList.add('income');
-			exp.exp_val = -exp.exp_val;
+			exp.exp_val = new Number(-exp.exp_val);
 		};
 		newExp.dataset.expId = exp.exp_id;
 		newExp.innerHTML = '€<input type="number" value="'+exp.exp_val+'" placeholder="'+exp.exp_val+'"/> - <input type="text" value="'+exp.exp_tag+'" placeholder="'+exp.exp_tag+'"/> - <input type="datetime-local" value="'+exp.exp_date.toISOString().split(".")[0]+'"/>';
@@ -112,14 +112,14 @@ function submitUpdate(input){
 	if(input.parentElement.classList.contains('income')){
 		inputVal = -inputVal;
 	}
-	fetch('https://yourDomain.com:1880/update/'+inputId+'/'+inputVal+'/'+inputTag+'/'+inputDate)
+	fetch('https://expensebot.ggstudio.io:1880/update/'+inputId+'/'+inputVal+'/'+inputTag+'/'+inputDate)
 	.then(function(response) {
 		return response.json();
 	})
 	.then(function(fetched) {
-		//console.log(fetched);
+		let un = getParameter('user');
 		$('ul').innerHTML = '';
-		getExpenses()
+		getExpenses(un)
 		.then(function(){
 			$('li[data-exp-id="'+inputId+'"]').classList.add('changed-exp');
 			setTimeout(function(){$('li[data-exp-id="'+inputId+'"]').classList.remove('changed-exp')}, 550);
