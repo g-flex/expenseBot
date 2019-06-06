@@ -50,7 +50,6 @@ if (msg.originalMessage.entities && msg.originalMessage.entities[0].type=='bot_c
 		let subStr = str.split(' ');
 		let strLength = subStr.length;
 		msg.payload = {};
-		//msg.payload.chatId = 539915525;
 		msg.payload.type = 'message';
 		if (strLength > 0 && strLength < 4 && (!isNaN(subStr[0]) || str.charAt(0)=='+')){
 			if(str.charAt(0)=='+' && str != '+' && !isNaN(subStr[0]) || !isNaN(subStr[1])){
