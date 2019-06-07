@@ -27,7 +27,7 @@ async function verifyLogged(){
 	// console.log('user: '+un);
 	// console.log('chid: '+chid);
 	if (un != null && chid != null && un != '' && chid != ''){
-		await fetch(`https://expensebot.ggstudio.io:1880/verify/${un}/${chid}`)
+		await fetch(`https://expensebot.mywebsite.com:1880/verify/${un}/${chid}`)
 		.then(function(response) {
 			return response.json();
 		})
@@ -45,12 +45,12 @@ async function verifyLogged(){
 }
 
 async function getExpenses(username){
-	await fetch(`https://expensebot.ggstudio.io:1880/view/${username}`)
+	await fetch(`https://expensebot.mywebsite.com:1880/view/${username}`)
 	.then(function(response) {
 		return response.json();
 	})
 	.then(function(fetched) {
-		//console.log('fetched EEEEExps: ', fetched);
+		//console.log(fetched);
 		fetchedExpenses = fetched[1];
 		listExpenses(fetchedExpenses);
 		changeListener();
@@ -112,12 +112,13 @@ function submitUpdate(input){
 	if(input.parentElement.classList.contains('income')){
 		inputVal = -inputVal;
 	}
-	fetch('https://expensebot.ggstudio.io:1880/update/'+inputId+'/'+inputVal+'/'+inputTag+'/'+inputDate)
+	fetch('https://expensebot.mywebsite.com:1880/update/'+inputId+'/'+inputVal+'/'+inputTag+'/'+inputDate)
 	.then(function(response) {
 		return response.json();
 	})
 	.then(function(fetched) {
 		let un = getParameter('user');
+		//console.log(fetched);
 		$('ul').innerHTML = '';
 		getExpenses(un)
 		.then(function(){
