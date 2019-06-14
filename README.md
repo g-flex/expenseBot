@@ -14,7 +14,7 @@ There is an upper part where I put the endpoints (same as an API), and a lower p
 
 An **endpoint** looks like this one: ![Expense Bot endpoint](/screens/specific%20endpoint.png)
 
-I collect *:params* from it and execute database queries with the function for mySQL node:
+I collect ```:params from it and execute database queries with the function for mySQL node:
 ![Expense Bot sql](/screens/specific%20query.png)
  Response is a json object.
  
