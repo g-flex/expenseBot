@@ -1,11 +1,11 @@
-## expenseBot
+# expenseBot
 ##### Simple node-red Telegram expense bot
 ###### This is a scholastic project. The purpose is to list expenses on-the-go with telegram messages. Required: mySQL database, node-red.
 To learn how I set up my server environment, you can head at [this guide](https://github.com/g-flex/linux-ami-setup).
 ***
 
 
-### Node-red
+## Node-red
 Plugins: [node-red-contrib-telegrambot](https://flows.nodered.org/node/node-red-contrib-telegrambot), [node-red-node-mysql](https://flows.nodered.org/node/node-red-node-mysql).
 This is what the flow looks like:
 ![Expense Bot flow](/screens/all%20flow.png)
@@ -126,7 +126,7 @@ Each command leads to a database query and a response.
 ***
 
 
-### Database
+## Database
 The database has this simple structure: 
 ![Expense Bot structure](/screens/database.png)
 
@@ -134,7 +134,7 @@ The database has this simple structure:
 ***
 
 
-### Telegram
+## Telegram
 Commands are the following: ![Expense Bot commands](/screens/commands.jpg)
 
 
@@ -146,7 +146,7 @@ The bot always replies with *success* or *error* .
 ***
 
 
-### Web App
+## Web App
 Its purpose is to display in an intuitive way all your expenses.
 
 
