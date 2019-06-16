@@ -155,3 +155,5 @@ This is an example of expense on the web app: ![Expense Bot webapp](/screens/web
 User can edit the field by clicking, editing and pressing enter.
 
 The **balance** is displayed on the top-left corner.
+
+I also added a chart from [Google Charts](https://developers.google.com/chart/) to better display balance and expenses over time.
