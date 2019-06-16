@@ -59,7 +59,7 @@ li{
 	position: relative;
 	background-color: rgba(245, 100, 100, .1);
 	color: rgba(255,255,255,.7);
-	padding: 10px;
+	padding: 10px 0;
 	border-radius: 5px;
 }
 li:hover{
@@ -168,11 +168,15 @@ li.income{
 	color: #2d2d2d;
 	border-bottom: 1px solid rgba(45, 45, 45, 0.3);
 }
-.login-form .button {
+.login-form .button, .chart-button {
 	width: 100px;
 	text-align: center;
 	margin: 20px auto 10px auto;
 	background-color: #303F9F;
+}
+
+.chart-button {
+	width: 200px;
 }
 
 .form-row {
@@ -226,7 +230,7 @@ li.income{
 	border: none;
 }
 
-.login-form .button, .no-selectable {
+.login-form .button, .chart-button, .no-selectable {
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 	-khtml-user-select: none;
@@ -235,7 +239,7 @@ li.income{
 	user-select: none;
 }
 
-.login-form .button{
+.login-form .button, .chart-button{
 	min-width: 80px;
 	background-color: #303F9F;
 	padding: 10px;
@@ -245,10 +249,25 @@ li.income{
 	transition: all 0.1s ease-out;
 	color: white;
 }
-.login-form .button:hover{
+.login-form .button:hover, .chart-button:hover{
 	cursor: pointer;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.4), 0 2px 1px -1px rgba(0, 0, 0, 0.4), 0 1px 2px 0 black;
 }
-.login-form .button:active{
+.login-form .button:active, .chart-button:active{
 	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 4px 2px -1px rgba(0, 0, 0, 0.12), 0 4px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+canvas{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+	opacity: .6;
+}
+canvas, #chart_div{
+	border-radius: 5px;
+	overflow: hidden;
+	margin-top: 30px;
+	width: 60%;
+	height: 500px;
 }
