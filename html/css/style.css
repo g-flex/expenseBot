@@ -271,3 +271,21 @@ canvas, #chart_div{
 	width: 60%;
 	height: 500px;
 }
+
+@media all and (max-width: 768px) {
+	#chart_div{
+		width: 100%;
+	}
+	
+	ul{
+		width: 100%;
+	}
+	
+	li input[type="number"]{
+		width: 20%;
+	}
+	
+	li input{
+		width: 35%;
+	}
+}
