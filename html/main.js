@@ -117,7 +117,7 @@ async function getExpenses(username){
 }
 
 var valuesArray=[], balancesArray=[0], datesArray=[];
-var pointStyle = 'point {shape-type: circle; size: 8; stroke-width: 3; visible: true; fill-color: #303f9f; stroke-color: #ffffff;}';
+var pointStyle;
 
 function listExpenses(exps){
 	balance = 0;
@@ -140,8 +140,10 @@ function listExpenses(exps){
 			newExp.classList.add('income');
 			exp.exp_val = new Number(-exp.exp_val);
 			thisValuesArray.push(exp.exp_tag+' +€'+exp.exp_val);
+			pointStyle = 'point {shape-type: circle; size: 8; stroke-width: 3; visible: true; fill-color: #303f9f; stroke-color: #64f564;}';
 		} else {
 			thisValuesArray.push(exp.exp_tag+' -€'+exp.exp_val);
+			pointStyle = 'point {shape-type: circle; size: 8; stroke-width: 3; visible: true; fill-color: #303f9f; stroke-color: #f56464;}';
 		}
 		thisValuesArray.push(pointStyle);
 		valuesArray.push(thisValuesArray);
