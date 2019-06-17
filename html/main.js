@@ -62,6 +62,7 @@ let fetchedExpenses;
 let balance = new Number();
 let newDateGMT = new Date();
 let GMTDiff = newDateGMT.getTimezoneOffset() * 60000;
+let openedChart = false;
 
 // var url = window.location ? window.location : window.location.search;
 // console.log(url);
@@ -157,6 +158,12 @@ function listExpenses(exps){
 
 $('.chart-button').addEventListener('click', function(){
 	google.charts.setOnLoadCallback(drawLineStyles);
+});
+
+window.addEventListener("resize", function(){
+	if(openedChart){
+		google.charts.setOnLoadCallback(drawLineStyles);
+	}
 });
 
 function changeListener(){
