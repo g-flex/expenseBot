@@ -1,7 +1,6 @@
 # expenseBot
 ##### Simple node-red Telegram expense bot
 ###### This is a scholastic project. The purpose is to list expenses on-the-go with telegram messages. Required: mySQL database, node-red.
-To learn how I set up my server environment, you can head at [this guide](https://github.com/g-flex/linux-ami-setup).
 ***
 
 
